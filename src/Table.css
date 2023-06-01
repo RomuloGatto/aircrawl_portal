@@ -1,0 +1,54 @@
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+table {
+  /* border: 1px solid lightgray; */
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+thead {
+  height: 50px;
+}
+
+tbody {
+  border-bottom: 1px solid lightgray;
+}
+
+tr {
+  height: 25px;
+}
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+th {
+  border-bottom: 1px solid lightgray;
+  /* border-right: 1px solid lightgray; */
+  padding: 2px 4px;
+}
+
+/* tfoot {
+  color: gray;
+}
+
+tfoot th {
+  font-weight: normal;
+} */
+
+.to-left {
+  float: left;
+  text-align: left;
+}
+
+.to-right {
+  float: right;
+  text-align: right;
+}
+
+.div-header {
+  padding-top: 15px;
+}
