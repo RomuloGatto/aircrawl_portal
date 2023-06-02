@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aircrawl_portal/static/css/main.e82afc75.css",
-    "main.js": "/aircrawl_portal/static/js/main.975a3b6b.js",
+    "main.js": "/aircrawl_portal/static/js/main.bf844eb5.js",
     "static/js/787.a1d8407a.chunk.js": "/aircrawl_portal/static/js/787.a1d8407a.chunk.js",
     "index.html": "/aircrawl_portal/index.html",
     "main.e82afc75.css.map": "/aircrawl_portal/static/css/main.e82afc75.css.map",
-    "main.975a3b6b.js.map": "/aircrawl_portal/static/js/main.975a3b6b.js.map",
+    "main.bf844eb5.js.map": "/aircrawl_portal/static/js/main.bf844eb5.js.map",
     "787.a1d8407a.chunk.js.map": "/aircrawl_portal/static/js/787.a1d8407a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e82afc75.css",
-    "static/js/main.975a3b6b.js"
+    "static/js/main.bf844eb5.js"
   ]
 }
