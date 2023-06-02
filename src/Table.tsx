@@ -1,14 +1,16 @@
 import './Table.css';
 
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import { SortingState, createColumnHelper, flexRender, getCoreRowModel, getPaginationRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table"
+
+import axios from 'axios';
 
 export type Flight = {
   airline: string
-  flight_date: string
-  checked_at: string
   departure_iata: string
   arrival_iata: string
+  flight_date: string
+  checked_at: string
   economy_class: number
   premium_class: number
   business_class: number
@@ -51,15 +53,28 @@ const columns = [
   }),
 ]
 
-interface TableProps {
-  inputData: Flight[]
-}
+// interface TableProps {
+//   inputData: Flight[]
+// }
 
-export default function Table({inputData}: TableProps) {
+export default function Table() {
   // Table component logic and UI come here
-  const [ data ] = React.useState(() => [...inputData])
+  const [ data, setData ] = React.useState(() => [])
   // const rerender = React.useReducer(() => ({}), {})[1]
   const [ sorting, setSorting ] = useState<SortingState>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://p01--skillful-icicle--j568k28k7hz4.code.run/api/v1/flight/');
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const table = useReactTable({
     data,
